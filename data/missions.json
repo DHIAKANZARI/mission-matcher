@@ -1,0 +1,105 @@
+[
+  {
+    "id": "m01",
+    "client": "Banque d'investissement",
+    "title": "Développeur Java fullstack & IA",
+    "description": "Développement d'une plateforme de pricing en Java Spring Boot avec un module d'IA générative pour assister les opérateurs. Front Angular, déploiement Kubernetes.",
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "Angular",
+      "AI",
+      "Kubernetes"
+    ],
+    "city": "Sophia Antipolis",
+    "remoteOk": true,
+    "start": "2026-12-01",
+    "minYears": 2,
+    "maxYears": 8
+  },
+  {
+    "id": "m02",
+    "client": "Assureur",
+    "title": "Data Scientist détection de fraude",
+    "description": "Construire et industrialiser des modèles de machine learning pour détecter les fraudes sur les sinistres. Python, scikit-learn, SQL.",
+    "skills": [
+      "Python",
+      "Machine Learning",
+      "scikit-learn",
+      "SQL"
+    ],
+    "city": "Nice",
+    "remoteOk": true,
+    "start": "2026-11-25",
+    "minYears": 2,
+    "maxYears": 6
+  },
+  {
+    "id": "m03",
+    "client": "Opérateur télécom",
+    "title": "Ingénieur DevOps cloud",
+    "description": "Automatiser l'infrastructure AWS avec Terraform, maintenir les pipelines CI/CD et la plateforme Kubernetes.",
+    "skills": [
+      "AWS",
+      "Terraform",
+      "Kubernetes",
+      "CI/CD"
+    ],
+    "city": "Aix-en-Provence",
+    "remoteOk": true,
+    "start": "2027-01-02",
+    "minYears": 4,
+    "maxYears": 12
+  },
+  {
+    "id": "m04",
+    "client": "Acteur du transport",
+    "title": "Développeur fullstack JavaScript",
+    "description": "Refonte d'une application de suivi de flotte : front React, API Node.js, base MongoDB, temps réel.",
+    "skills": [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "TypeScript"
+    ],
+    "city": "Nice",
+    "remoteOk": true,
+    "start": "2026-11-24",
+    "minYears": 1,
+    "maxYears": 5
+  },
+  {
+    "id": "m05",
+    "client": "Banque de détail",
+    "title": "Assistant RAG pour les conseillers",
+    "description": "Mettre en place un assistant LLM avec RAG sur la documentation produits, API Python, sécurité des données.",
+    "skills": [
+      "Python",
+      "LLM",
+      "RAG",
+      "FastAPI"
+    ],
+    "city": "Sophia Antipolis",
+    "remoteOk": true,
+    "start": "2026-12-01",
+    "minYears": 1,
+    "maxYears": 6
+  },
+  {
+    "id": "m06",
+    "client": "Industriel",
+    "title": "Ingénieur cybersécurité applicative",
+    "description": "Intégrer la sécurité dans le cycle de développement : revues de code, outils SAST/DAST dans la CI, OWASP.",
+    "skills": [
+      "OWASP",
+      "DevSecOps",
+      "Java",
+      "CI/CD"
+    ],
+    "city": "Montpellier",
+    "remoteOk": false,
+    "start": "2026-12-15",
+    "minYears": 3,
+    "maxYears": 10
+  }
+]

@@ -1,0 +1,269 @@
+[
+  {
+    "id": "c01",
+    "name": "Camille Roux",
+    "title": "Développeuse Java / Spring",
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Docker",
+      "Kafka"
+    ],
+    "years": 6,
+    "city": "Sophia Antipolis",
+    "remote": true,
+    "availableFrom": "2026-11-25",
+    "summary": "Microservices Java pour une banque de financement, migration vers Kafka et Kubernetes."
+  },
+  {
+    "id": "c02",
+    "name": "Yanis Belkacem",
+    "title": "Développeur Fullstack Java / Angular",
+    "skills": [
+      "Java",
+      "Spring",
+      "Angular",
+      "TypeScript",
+      "SQL"
+    ],
+    "years": 4,
+    "city": "Valbonne",
+    "remote": false,
+    "availableFrom": "2026-12-01",
+    "summary": "Applications métiers assurance, front Angular et API Spring, tests automatisés."
+  },
+  {
+    "id": "c03",
+    "name": "Léa Martin",
+    "title": "Data Scientist",
+    "skills": [
+      "Python",
+      "Machine Learning",
+      "Pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "years": 3,
+    "city": "Nice",
+    "remote": true,
+    "availableFrom": "2026-11-20",
+    "summary": "Modèles de scoring et de détection de fraude, mise en production avec MLflow."
+  },
+  {
+    "id": "c04",
+    "name": "Hugo Bernard",
+    "title": "Ingénieur DevOps",
+    "skills": [
+      "Kubernetes",
+      "Docker",
+      "AWS",
+      "Terraform",
+      "CI/CD",
+      "Python"
+    ],
+    "years": 7,
+    "city": "Aix-en-Provence",
+    "remote": true,
+    "availableFrom": "2027-01-05",
+    "summary": "Plateformes cloud AWS, pipelines CI/CD, observabilité Prometheus/Grafana."
+  },
+  {
+    "id": "c05",
+    "name": "Sofia Haddad",
+    "title": "Développeuse IA / LLM",
+    "skills": [
+      "Python",
+      "LLM",
+      "RAG",
+      "LangChain",
+      "FastAPI",
+      "Java"
+    ],
+    "years": 2,
+    "city": "Sophia Antipolis",
+    "remote": true,
+    "availableFrom": "2026-11-24",
+    "summary": "Assistants à base de LLM et RAG pour la documentation interne, API FastAPI."
+  },
+  {
+    "id": "c06",
+    "name": "Thomas Girard",
+    "title": "Développeur C++ temps réel",
+    "skills": [
+      "C++",
+      "Linux",
+      "Multithreading",
+      "Python"
+    ],
+    "years": 9,
+    "city": "Valbonne",
+    "remote": false,
+    "availableFrom": "2026-12-15",
+    "summary": "Systèmes de trading basse latence et moteurs de calcul de risque."
+  },
+  {
+    "id": "c07",
+    "name": "Inès Moreau",
+    "title": "Business Analyst Finance",
+    "skills": [
+      "SQL",
+      "Excel",
+      "Agile",
+      "Marchés financiers"
+    ],
+    "years": 5,
+    "city": "Paris",
+    "remote": true,
+    "availableFrom": "2026-11-20",
+    "summary": "Recueil de besoins front-office, rédaction de spécifications, recette."
+  },
+  {
+    "id": "c08",
+    "name": "Mehdi Ziani",
+    "title": "Développeur Fullstack JavaScript",
+    "skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "TypeScript"
+    ],
+    "years": 3,
+    "city": "Nice",
+    "remote": true,
+    "availableFrom": "2026-11-21",
+    "summary": "Applications web React/Node pour des PME, API REST, déploiement Docker."
+  },
+  {
+    "id": "c09",
+    "name": "Julie Lefèvre",
+    "title": "Ingénieure Cybersécurité applicative",
+    "skills": [
+      "OWASP",
+      "Java",
+      "Python",
+      "Pentest",
+      "DevSecOps"
+    ],
+    "years": 5,
+    "city": "Montpellier",
+    "remote": true,
+    "availableFrom": "2026-12-10",
+    "summary": "Audits de code, intégration SAST/DAST dans les pipelines, sensibilisation des équipes."
+  },
+  {
+    "id": "c10",
+    "name": "Nicolas Petit",
+    "title": "Architecte Java",
+    "skills": [
+      "Java",
+      "Spring",
+      "Kafka",
+      "Microservices",
+      "AWS"
+    ],
+    "years": 14,
+    "city": "Sophia Antipolis",
+    "remote": false,
+    "availableFrom": "2027-02-01",
+    "summary": "Architecture microservices pour un opérateur télécom, mentoring d'équipes."
+  },
+  {
+    "id": "c11",
+    "name": "Amira Saïdi",
+    "title": "Développeuse Java junior",
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "React",
+      "Git"
+    ],
+    "years": 1,
+    "city": "Nice",
+    "remote": true,
+    "availableFrom": "2026-11-20",
+    "summary": "Diplômée récente, projet de fin d'études : application de réservation Spring Boot + React."
+  },
+  {
+    "id": "c12",
+    "name": "Lucas Fontaine",
+    "title": "Data Engineer",
+    "skills": [
+      "Python",
+      "Spark",
+      "Airflow",
+      "SQL",
+      "AWS"
+    ],
+    "years": 4,
+    "city": "Toulouse",
+    "remote": true,
+    "availableFrom": "2026-12-01",
+    "summary": "Pipelines de données pour l'aéronautique, entrepôt de données et qualité de données."
+  },
+  {
+    "id": "c13",
+    "name": "Chloé Dumas",
+    "title": "Product Owner IA",
+    "skills": [
+      "Agile",
+      "Scrum",
+      "AI",
+      "Product management"
+    ],
+    "years": 6,
+    "city": "Paris",
+    "remote": true,
+    "availableFrom": "2026-11-28",
+    "summary": "Pilotage de produits d'IA générative, priorisation du backlog, mesure de la valeur."
+  },
+  {
+    "id": "c14",
+    "name": "Karim Benali",
+    "title": "Développeur .NET / Azure",
+    "skills": [
+      "C#",
+      ".NET",
+      "Azure",
+      "SQL"
+    ],
+    "years": 5,
+    "city": "Nantes",
+    "remote": true,
+    "availableFrom": "2026-12-05",
+    "summary": "Applications .NET pour l'industrie, migration Azure."
+  },
+  {
+    "id": "c15",
+    "name": "Emma Laurent",
+    "title": "Développeuse Python / Django",
+    "skills": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "React"
+    ],
+    "years": 3,
+    "city": "Sophia Antipolis",
+    "remote": false,
+    "availableFrom": "2026-11-30",
+    "summary": "Back-offices Django et APIs pour le secteur des transports."
+  },
+  {
+    "id": "c16",
+    "name": "Rayan Chevalier",
+    "title": "Ingénieur QA automatisation",
+    "skills": [
+      "Selenium",
+      "Java",
+      "Cucumber",
+      "CI/CD"
+    ],
+    "years": 4,
+    "city": "Aix-en-Provence",
+    "remote": true,
+    "availableFrom": "2026-11-22",
+    "summary": "Automatisation des tests de non-régression, intégration Jenkins/GitLab CI."
+  }
+]
