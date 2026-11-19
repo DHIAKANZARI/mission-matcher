@@ -23,7 +23,7 @@ Chaque résultat liste les compétences trouvées et manquantes et les raisons d
 Java 21, **aucune dépendance externe** (serveur HTTP du JDK, parseur JSON maison) :
 
 ```bash
-./build.sh test                     # compile, lance les 15 tests, crée le jar
+bash build.sh test                  # compile, lance les 15 tests, crée le jar
 java -jar build/mission-matcher.jar # http://localhost:8080
 ```
 
