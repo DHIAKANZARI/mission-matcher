@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mission Matcher</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--line:#e3e6ef;--text:#1b2233;--muted:#667085;--accent:#4f46e5;--good:#16a34a;--mid:#d97706;--low:#dc2626}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text)}
+header{padding:18px 28px;background:#111827;color:#fff}header h1{margin:0;font-size:20px}header p{margin:4px 0 0;color:#9ca3af;font-size:13px}
+main{display:grid;grid-template-columns:340px 1fr;gap:20px;padding:20px 28px}@media(max-width:900px){main{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.mission{padding:10px 12px;border-radius:8px;cursor:pointer;border:1px solid transparent;margin-bottom:6px}.mission:hover{background:#f3f4ff}.mission.sel{border-color:var(--accent);background:#eef2ff}
+.mission b{display:block;font-size:14px}.mission small{color:var(--muted)}
+textarea,input{width:100%;border:1px solid var(--line);border-radius:8px;padding:8px;font:inherit;font-size:13px}
+button{background:var(--accent);color:#fff;border:0;border-radius:8px;padding:8px 14px;cursor:pointer;font-weight:600}
+.match{display:grid;grid-template-columns:70px 1fr;gap:14px;padding:14px;border:1px solid var(--line);border-radius:12px;background:#fff;margin-bottom:10px}
+.score{font-size:26px;font-weight:700;text-align:center}.score small{display:block;font-size:11px;color:var(--muted);font-weight:500}
+.tags span{display:inline-block;font-size:11px;padding:2px 8px;border-radius:99px;margin:2px 4px 0 0;background:#ecfdf5;color:#047857}.tags span.miss{background:#fef2f2;color:#b91c1c}
+.bars{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px;font-size:11px;color:var(--muted)}
+.bar{height:6px;background:#eef0f5;border-radius:4px;overflow:hidden;margin-top:3px}.bar i{display:block;height:100%;background:var(--accent)}
+ul{margin:6px 0 0;padding-left:18px;font-size:12px;color:var(--muted)}h2{font-size:15px;margin:0 0 10px}
+</style></head>
+<body>
+<header><h1>Mission Matcher</h1><p>Trouver les bons consultants pour une mission, avec un score explicable.</p></header>
+<main>
+  <section class="panel">
+    <h2>Missions</h2><div id="missions"></div>
+    <h2 style="margin-top:18px">Nouvelle mission</h2>
+    <input id="t" placeholder="Intitulé (ex : Développeur Java Spring)"><br><br>
+    <textarea id="d" rows="4" placeholder="Description de la mission"></textarea><br><br>
+    <input id="s" placeholder="Compétences requises, séparées par des virgules"><br><br>
+    <input id="c" placeholder="Ville (ex : Sophia Antipolis)"><br><br>
+    <button id="go">Trouver des profils</button>
+  </section>
+  <section><div id="title" class="panel" style="margin-bottom:12px"></div><div id="results"></div></section>
+</main>
+<script>
+const $=id=>document.getElementById(id); const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const color=s=>s>=75?'var(--good)':s>=55?'var(--mid)':'var(--low)';
+function render(r){
+  const m=r.mission; $('title').innerHTML=`<b>${esc(m.title)}</b> <small style="color:var(--muted)">· ${esc(m.client||'')} · ${esc(m.city||'')} · ${m.skills.map(esc).join(', ')}</small>`;
+  $('results').innerHTML=r.matches.map(x=>{const c=x.consultant;return `<div class="match"><div class="score" style="color:${color(x.score)}">${Math.round(x.score)}<small>/ 100</small></div>
+  <div><b>${esc(c.name)}</b> — ${esc(c.title)} <small style="color:var(--muted)">· ${c.years} ans · ${esc(c.city)}</small>
+  <div class="tags">${x.matchedSkills.map(s=>`<span>${esc(s)}</span>`).join('')}${x.missingSkills.map(s=>`<span class="miss">${esc(s)}</span>`).join('')}</div>
+  <div class="bars">${Object.entries(x.breakdown).map(([k,v])=>`<div>${k}<div class="bar"><i style="width:${Math.min(100,v*100)}%"></i></div></div>`).join('')}</div>
+  <ul>${x.reasons.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></div></div>`}).join('');
+}
+async function load(id){document.querySelectorAll('.mission').forEach(e=>e.classList.toggle('sel',e.dataset.id===id)); render(await (await fetch(`/api/missions/${id}/matches?top=5`)).json());}
+fetch('/api/missions').then(r=>r.json()).then(ms=>{$('missions').innerHTML=ms.map(m=>`<div class="mission" data-id="${m.id}"><b>${esc(m.title)}</b><small>${esc(m.client)} · ${esc(m.city)}</small></div>`).join('');
+  document.querySelectorAll('.mission').forEach(e=>e.onclick=()=>load(e.dataset.id)); load(ms[0].id);});
+$('go').onclick=async()=>{const body={title:$('t').value,description:$('d').value,skills:$('s').value.split(',').map(s=>s.trim()).filter(Boolean),city:$('c').value,remoteOk:true};
+  const r=await fetch('/api/match?top=5',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}); const j=await r.json(); if(!r.ok){alert(j.error);return;} render(j);};
+</script>
+</body></html>
